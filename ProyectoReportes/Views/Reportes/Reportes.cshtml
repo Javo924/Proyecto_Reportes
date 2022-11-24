@@ -1,0 +1,28 @@
+﻿@model ProyectoReportes.Controllers.objetos
+@{
+    ViewData["Title"] = "Interacción reportes";
+}
+<link rel="stylesheet" href="~/css/estilos.css" asp-append-version="true" />
+<script src="~/js/site.js"></script>
+
+<form id="form1">
+    <div>
+        <h1>@ViewData["Title"]</h1>
+
+        <input class="control"
+               type="text"
+               name="NumeroReporte"
+               id="Archivos"
+               placeholder="Numero de reporte"
+               required
+               onkeypress="return onlyNumberKey(event)"
+               asp-for="nreporte">
+        <br />
+
+        <input class="boton" type="submit" value="Descargar">
+
+    </div>
+</form>
+
+
+

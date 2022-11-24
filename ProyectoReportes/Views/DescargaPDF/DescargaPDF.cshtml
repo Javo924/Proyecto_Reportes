@@ -1,0 +1,41 @@
+﻿@model ProyectoReportes.Controllers.DescargaPDFController
+
+@{
+    ViewData["Title"] = "Descarga";
+}
+<link rel="stylesheet" href="~/css/estilos.css" asp-append-version="true" />
+<script src="~/js/site.js"></script>
+
+<body>
+    <form>
+    <div>
+        <h1>@ViewData["Title"]</h1>
+        <input class="control"
+               type="text"
+               name="nombre"
+               id="nombre"
+               placeholder="Nombre de archivo"
+               required
+               onkeypress="return onlyNumberKey(event)" />
+
+        <br />
+
+        <input class="control"
+               type="text"
+               name="contenido"
+               id="contenido"
+               placeholder="Contenido de archivo"
+               required
+               onkeyup="mostrar(this.value)"/>
+
+        <br />
+
+        <input class="boton"
+               id="descarga"
+               type="submit"
+               value="Descargar"
+               onclick="decarga('resultado')">
+    </div>
+        </form>
+    <p hidden id="resultado"></p>
+</body>

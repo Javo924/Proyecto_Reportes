@@ -1,0 +1,83 @@
+﻿@model ProyectoReportes.Controllers.SandboxController
+
+@{
+    ViewData["Title"] = "Sandbox";
+}
+
+<link rel="stylesheet" href="~/css/estilos.css" asp-append-version="true" />
+<script src="~/js/site.js"></script>
+
+<form id="form1">
+    <div>
+        <h1>@ViewData["Title"]</h1>
+
+        <input class="control"
+               type="text"
+               name="nombre"
+               id="nombre"
+               placeholder="Nombre de archivo"
+               required
+               onkeypress="return onlyNumberKey(event)" />
+
+        <br />
+
+        <input class="control"
+               type="text"
+               name="contenido"
+               id="contenido"
+               placeholder="Contenido de archivo"
+               required />
+
+        <br />
+
+        <input class="boton" id="descarga" type="submit" value="Descargar" disabled>
+
+
+        <a class="btnexp" href="site.js:pdfexport();">Export PDF</a>
+
+    </div>
+
+</form>
+
+<div class="jumbotron jumbotron-fluid">
+    <h1 class="text-center display-4">Descarga Archivos</h1>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <form method="post" asp-action="DownloadPersonalizado">
+                <div class="form-group">
+                    <input type="text" name="mensaje" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-primary">Descargar Personalizado</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="list-group">
+        <a asp-controller="Sandbox"
+           asp-action="DownloadMessage"
+           class="list-group-item list-group-item-action">
+            Descargar Mensaje
+        </a>
+        <a asp-controller="Sandbox"
+           asp-action="DownloadStream"
+           class="list-group-item list-group-item-action">
+            Descargar Stream
+        </a>
+    </div>
+</div>
+
+
+<div class="col-md-12 text-center mt-5 mb-5 text-center" id="contenedor">
+
+    <a type="button" class="btn btn-success mb-3" id="crearpdf"">Crear PDF</a>
+
+
+    <h1 class="text-center">El “Eng Metrics Dashboard” de Uber Para Medir La Productividad De Sus Ingenieros</h1>
+    <img src="https://blog.nubecolectiva.com/wp-content/uploads/2022/10/cimg_destacada_blog_devs-930x360.png" class="img-fluid pb-3">
+    <p class="texto"> El pasado Jueves 4 de Agosto de 2022, Uber la popular empresa proovedora de servicios de movilidad realizo el evento All-Hands. Este evento fue presentado por su actual CEO Dara Khosrowshahi (Hasta la fecha de este Post, es su actual CEO, pero en el futuro no sabemos quien tendrá el cargo) y presento datos interesantes y sobre como mide Uber la productividad de sus ingenieros o las tareas de ingenieria en la empresa, en este artículo te contaré sobre El “Eng Metrics Dashboard” de Uber Para Medir La Productividad De Sus Ingeniero... </p>
+    Leer más: <a href="https://blog.nubecolectiva.com/el-eng-metrics-dashboard-de-uber-para-medir-la-productividad-de-sus-ingenieros/" target="_blank">https://blog.nubecolectiva.com/el-eng-metrics-dashboard-de-uber-para-medir-la-productividad-de-sus-ingenieros/</a>
+
+</div>
