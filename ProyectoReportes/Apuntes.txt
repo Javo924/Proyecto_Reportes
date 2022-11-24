@@ -1,0 +1,12 @@
+﻿- Inyecciones de dependencias
+- Investigar como armar un Appsettings
+- How to download an ftp
+- arreglos/llaves y valores de archivos json
+- var = _config.getsecction(appsetting/loging).value();
+
+  Crear un proceso que busque un archivo pdf en blanco, el numero
+  ingresado va a ser el mismo que el nombre del pdf
+  Validaciones:
+  - El archivo tiene que ser extención pdf
+  - El numero ingresado tiene que ser el mismo que el nombre de archivo
+  - El programa debe buscar la ruta del archivo

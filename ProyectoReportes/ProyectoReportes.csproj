@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Reportes\" />
+    <None Remove="Views\Sandbox\" />
+    <None Remove="IronPdf" />
+    <None Remove="Views\DescargaPDF\" />
+    <None Remove="Rotativa" />
+    <None Remove="Rotativa.AspNetCore" />
+    <None Remove="Rotativa.MVC" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Reportes\" />
+    <Folder Include="Views\Sandbox\" />
+    <Folder Include="Views\DescargaPDF\" />
+    <Folder Include="wwwroot\Rotativa\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Rotativa.AspNetCore" Version="1.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Rotativa\" />
+  </ItemGroup>
+</Project>
